@@ -1,61 +1,57 @@
 # LLM API and Local Models
 
-## Основные темы
+## Main topics
 
-- Устройство LLM API: токены, messages, usage, finish_reason
-- Первый запрос через curl и SDK openai
-- Настройки через pydantic-settings
-- История диалога, цена запроса, ошибки и повторы
-- Своя обёртка LLMClient
-- Форматы API и провайдеры
-- Параметры генерации
-- Консольное приложение на Typer и Rich
-- Локальные модели через Ollama и LM Studio
-- Финальный проект: диалог двух моделей в терминале
+- LLM API: tokens, messages, usage, finish_reason
+- Chat history, request cost, errors and retries
+- API formats and providers
+- Generation parameters
+- A console app with Typer and Rich
+- Local models with Ollama and LM Studio
 
-## Быстрый старт
+## Getting started
 
 ```bash
 uv sync
 ```
 
-`uv` сам установит Python 3.14 из файла `.python-version` и все зависимости.
+`uv` installs Python 3.14 (set in `.python-version`) and all dependencies for you.
 
-Скопируйте `.env.example` в `.env` и впишите ключ API:
+Copy `.env.example` to `.env` and add your API key:
 
 ```bash
 cp .env.example .env
 ```
 
-| Переменная     | Значение по умолчанию     | Назначение                          |
-|----------------|---------------------------|-------------------------------------|
-| `LLM_API_KEY`  | нет, обязательна          | Ключ API провайдера                 |
-| `LLM_BASE_URL` | `https://ollama.com/v1`   | Адрес OpenAI-совместимого API       |
-| `LLM_MODEL`    | `gemma4:31b`              | Модель, которой отправляются запросы |
+| Variable       | Default                 | What it is                              |
+|----------------|-------------------------|-----------------------------------------|
+| `LLM_API_KEY`  | none, required          | API key from your provider              |
+| `LLM_BASE_URL` | `https://ollama.com/v1` | Address of the OpenAI-compatible API    |
+| `LLM_MODEL`    | `gemma4:31b`            | Model that receives your requests       |
 
-Файл `.env` в git не попадает. Чтобы сменить провайдера или перейти на локальную модель, меняйте только эти три значения.
+The `.env` file is not committed to git. To use another provider or a local model, change only these three values.
 
-Примеры запускаются из корня репозитория как модули:
+Run the examples from the root of the repository, as modules:
 
 ```bash
 uv run python -m src.modules.m1_llm_api_basics.l02_raw_json
 ```
 
-## Программа
+## Program
 
-| Модуль                                  | Тема                          | Примеры                                                                                          |
-|-----------------------------------------|-------------------------------|--------------------------------------------------------------------------------------------------|
-| **1. Как устроен LLM API и первый запрос** | Токены                        | [Токены](src/modules/m1_llm_api_basics/l01_tokens.py)                                            |
-|                                         | Сырой JSON                    | [Запрос без SDK](src/modules/m1_llm_api_basics/l02_raw_json.py)                                  |
-|                                         | Первый запрос                 | [SDK openai](src/modules/m1_llm_api_basics/l03_first_call.py)                                    |
-|                                         | Настройки                     | [Settings](src/settings.py)                                                                      |
-|                                         | История диалога               | [Чат](src/modules/m1_llm_api_basics/l04_history.py)                                              |
-|                                         | Цена запроса                  | [Расчёт по usage](src/modules/m1_llm_api_basics/l05_cost.py)                                     |
-|                                         | Ошибки и лимиты               | [Повторы с паузой](src/modules/m1_llm_api_basics/l06_errors.py)                                  |
+| Module                                     | Topic            | Examples                                                         |
+|--------------------------------------------|------------------|------------------------------------------------------------------|
+| **1. How an LLM API works and first call** | Tokens           | [Tokens](src/modules/m1_llm_api_basics/l01_tokens.py)            |
+|                                            | Raw JSON         | [Request without SDK](src/modules/m1_llm_api_basics/l02_raw_json.py) |
+|                                            | First request    | [openai SDK](src/modules/m1_llm_api_basics/l03_first_call.py)    |
+|                                            | Settings         | [Settings](src/settings.py)                                      |
+|                                            | Chat history     | [Chat](src/modules/m1_llm_api_basics/l04_history.py)             |
+|                                            | Request cost     | [Cost from usage](src/modules/m1_llm_api_basics/l05_cost.py)     |
+|                                            | Errors and limits | [Retries with a pause](src/modules/m1_llm_api_basics/l06_errors.py) |
 
-## Скрипты
+## Scripts
 
-### Линтеры
+### Linters
 
 ```bash
 uv run ruff format src && uv run ruff check --fix src && uv run mypy src
