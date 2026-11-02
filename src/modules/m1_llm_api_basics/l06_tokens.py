@@ -1,5 +1,5 @@
-"""Урок 1. Как текст превращается в токены.
-Запуск: uv run python -m src.modules.m1_llm_api_basics.l01_tokens
+"""Урок 6. Как текст превращается в токены.
+Запуск: uv run python -m src.modules.m1_llm_api_basics.l06_tokens
 """
 
 import tiktoken

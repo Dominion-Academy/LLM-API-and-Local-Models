@@ -39,15 +39,16 @@ uv run python -m src.modules.m1_llm_api_basics.l02_raw_json
 
 ## Program
 
-| Module                                     | Topic            | Examples                                                         |
-|--------------------------------------------|------------------|------------------------------------------------------------------|
-| **1. How an LLM API works and first call** | Tokens           | [Tokens](src/modules/m1_llm_api_basics/l01_tokens.py)            |
-|                                            | Raw JSON         | [Request without SDK](src/modules/m1_llm_api_basics/l02_raw_json.py) |
-|                                            | First request    | [openai SDK](src/modules/m1_llm_api_basics/l03_first_call.py)    |
-|                                            | Settings         | [Settings](src/settings.py)                                      |
-|                                            | Chat history     | [Chat](src/modules/m1_llm_api_basics/l04_history.py)             |
-|                                            | Request cost     | [Cost from usage](src/modules/m1_llm_api_basics/l05_cost.py)     |
-|                                            | Errors and limits | [Retries with a pause](src/modules/m1_llm_api_basics/l06_errors.py) |
+| Module            | Topic             | Examples                                                            |
+|-------------------|-------------------|---------------------------------------------------------------------|
+| **1. First call** | Raw JSON          | [Request without SDK](src/modules/m1_llm_api_basics/l02_raw_json.py) |
+|                   | SDK               | [openai SDK](src/modules/m1_llm_api_basics/l03_sdk_openai.py)       |
+|                   |                   | [ollama SDK](src/modules/m1_llm_api_basics/l04_sdk_ollama.py)       |
+|                   | Settings          | [Settings](src/settings.py)                                         |
+|                   | Chat history      | [Chat](src/modules/m1_llm_api_basics/l05_history.py)                |
+|                   | Tokens            | [Tokens](src/modules/m1_llm_api_basics/l06_tokens.py)               |
+|                   | Request cost      | [Cost from usage](src/modules/m1_llm_api_basics/l07_cost.py)        |
+|                   | Errors and limits | [Retries with a pause](src/modules/m1_llm_api_basics/l08_errors.py) |
 
 ## Scripts
 

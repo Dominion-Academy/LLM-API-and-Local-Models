@@ -1,5 +1,5 @@
-"""Урок 5. Цена запроса по полю usage.
-Запуск: uv run python -m src.modules.m1_llm_api_basics.l05_cost
+"""Урок 6. Цена запроса по полю usage.
+Запуск: uv run python -m src.modules.m1_llm_api_basics.l07_cost
 """
 
 from openai import OpenAI

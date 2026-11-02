@@ -1,5 +1,5 @@
-"""Урок 6. Ошибки API и повтор запроса с экспоненциальной паузой.
-Запуск: uv run python -m src.modules.m1_llm_api_basics.l06_errors
+"""Урок 7. Ошибки API и повтор запроса с экспоненциальной паузой.
+Запуск: uv run python -m src.modules.m1_llm_api_basics.l08_errors
 """
 
 import time

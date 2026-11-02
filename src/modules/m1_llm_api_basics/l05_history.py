@@ -1,5 +1,5 @@
-"""Урок 4. Модель не помнит прошлых запросов: историю присылаем мы.
-Запуск: uv run python -m src.modules.m1_llm_api_basics.l04_history
+"""Урок 5. Модель не помнит прошлых запросов: историю присылаем мы.
+Запуск: uv run python -m src.modules.m1_llm_api_basics.l05_history
 """
 
 from openai import OpenAI
